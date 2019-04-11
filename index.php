@@ -1,9 +1,27 @@
-<!--  セッションを使ってみよう -->
-<?php
-
-//ビンゴシートのルール
-// B 0-15
-// I 16-30
-// N 31-45 真ん中はなし
-// G 46-60
-// O 61-75
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>BINGO</title>
+</head>
+<body>
+    <div id="container">
+        <table>
+            <tr>
+                <th>B</th>
+                <th>I</th>
+                <th>N</th>
+                <th>G</th>
+                <th>O</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
