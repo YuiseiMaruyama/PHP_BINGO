@@ -2,4 +2,4 @@
 
 ini_set('display_errors',1);//エラーを見やすくする
 
-require(__DIR__ . '/functions.php');
+require_once(__DIR__ . '/functions.php');
