@@ -18,8 +18,7 @@ for($i=0; $i<5; $i++){
     $nums[$i] = array_slice($col,0,5); //array_sliceは、配列の一部を切り取る関数
 }
 
-// var_dump($num);
-// exit; //メッセージを出力して、現在のプログラムを終了する
+$nums[2][2] ="FREE";
 
 function h($s){
     return htmlspecialchars($s,ENT_QUOTES,'UTF-8');
