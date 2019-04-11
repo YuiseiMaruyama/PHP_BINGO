@@ -2,24 +2,28 @@
 
 // $nums[][]
 
-// B: $nums[0][1~15]
-// I: $nums[1][16~30]
+// B: $nums[0]1~15
+// I: $nums[1]16~30
 // ・・
-// G: $nums[4][61~75]
+// G: $nums[4]61~75
 
 //一般公
-// $num[$i][$i*15+1 ~ $i*15+15]
+// $num[$i]$i*15+1 ~ $i*15+15
 
 $nums = [];
 
 for($i=0; $i<5; $i++){
     $col = range($i*15+1, $i*15+15); //rangeは、ある範囲の整数を有する配列を作成する関数
     shuffle($col);  //shuffleは、指定した配列をシャッフルして並び順をランダムにする関数
-    $num[$i] = array_slice($col,0,5); //array_sliceは、配列の一部を切り取る関数
+    $nums[$i] = array_slice($col,0,5); //array_sliceは、配列の一部を切り取る関数
 }
 
-var_dump($num);
-exit; //メッセージを出力して、現在のプログラムを終了する
+// var_dump($num);
+// exit; //メッセージを出力して、現在のプログラムを終了する
+
+function h($s){
+    return htmlspecialchars($s,ENT_QUOTES,'UTF-8');
+}
 
 ?>
 
@@ -42,13 +46,14 @@ exit; //メッセージを出力して、現在のプログラムを終了する
                 <th>G</th>
                 <th>O</th>
             </tr>
+            <!-- iは行、jは列 -->
+            <?php for($i=0; $i<5; $i++) : ?>
             <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+            <?php for($j=0; $j<5; $j++) : ?>
+                <td><?= h($nums[$j][$i]); ?></td>
+                <?php endfor; ?>
             </tr>
+            <?php endfor; ?>
         </table>
     </div>
 </body>
